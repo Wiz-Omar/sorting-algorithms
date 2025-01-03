@@ -14,7 +14,7 @@ public class SortingAlgorithmsTest {
   }
 
   @Test //Mutation test 2
-  public void testEqualValuesAreNotSwitched(){
+  public void testBubbleSortEqualValuesAreNotSwitched(){
     class Pair<K extends Comparable<K>, V> implements Comparable<Pair<K, V>> {
       final K key;
       final V value; //The value is only used to differentiate the order of similar “keys”

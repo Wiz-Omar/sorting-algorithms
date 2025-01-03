@@ -14,7 +14,7 @@ public class SortingAlgorithmsTest {
   }
 
   @Test //Mutation test 2
-  public void testEqualValuesAreNotSwitched(){
+  public void testBubbleSortEqualValuesAreNotSwitched(){
     class Pair<K extends Comparable<K>, V> implements Comparable<Pair<K, V>> {
       final K key;
       final V value; //The value is only used to differentiate the order of similar “keys”
@@ -141,12 +141,12 @@ public class SortingAlgorithmsTest {
   }
   @Test //Partition 8
   public void testUnsortedMultipleElementArray() {
-    final Integer[] data1 = {5, 3, 8, 6, 2, 7, 4, 1};
-    final Integer[] data2 = {5, 3, 8, 6, 2, 7, 4, 1};
-    final Integer[] data3 = {5, 3, 8, 6, 2, 7, 4, 1};
-    final Integer[] data4 = {5, 3, 8, 6, 2, 7, 4, 1};
-    final Integer[] data5 = {5, 3, 8, 6, 2, 7, 4, 1};
-    final Integer[] data6 = {5, 3, 8, 6, 2, 7, 4, 1};
+    final Integer[] data1 = {5, 14, 7, 15, 45, 67};
+    final Integer[] data2 = {5, 14, 7, 15, 45, 67};
+    final Integer[] data3 = {5, 14, 7, 15, 45, 67};
+    final Integer[] data4 = {5, 14, 7, 15, 45, 67};
+    final Integer[] data5 = {5, 14, 7, 15, 45, 67};
+    final Integer[] data6 = {5, 14, 7, 15, 45, 67};
 
     BubbleSort.bubbleSort(data1);
     Heapsort.heapSort(data2);
@@ -155,12 +155,12 @@ public class SortingAlgorithmsTest {
     Quicksort.quickSort(data5);
     SelectionSort.selectionSort(data6);
 
-    assertEquals("[1, 2, 3, 4, 5, 6, 7, 8]", Arrays.toString(data1));
-    assertEquals("[1, 2, 3, 4, 5, 6, 7, 8]", Arrays.toString(data2));
-    assertEquals("[1, 2, 3, 4, 5, 6, 7, 8]", Arrays.toString(data3));
-    assertEquals("[1, 2, 3, 4, 5, 6, 7, 8]", Arrays.toString(data4));
-    assertEquals("[1, 2, 3, 4, 5, 6, 7, 8]", Arrays.toString(data5));
-    assertEquals("[1, 2, 3, 4, 5, 6, 7, 8]", Arrays.toString(data6));
+    assertEquals("[5, 7, 14, 15, 45, 67]", Arrays.toString(data1));
+    assertEquals("[5, 7, 14, 15, 45, 67]", Arrays.toString(data2));
+    assertEquals("[5, 7, 14, 15, 45, 67]", Arrays.toString(data3));
+    assertEquals("[5, 7, 14, 15, 45, 67]", Arrays.toString(data4));
+    assertEquals("[5, 7, 14, 15, 45, 67]", Arrays.toString(data5));
+    assertEquals("[5, 7, 14, 15, 45, 67]", Arrays.toString(data6));
   }
   @Test //Partition 9
   public void test_array_with_duplicate_elements() {
@@ -211,6 +211,7 @@ public class SortingAlgorithmsTest {
     assertEquals("[-99, -7, -3, 0, 1, 4, 5, 11, 12, 15]", Arrays.toString(data6));
   }
 
+  //ORIGINAL TEST SUITE
   @Test
   public void testBubbleSort() {
       final Integer[] data = {4, 3, 0, 11, 7, 5, 15, 12, 99, 1};

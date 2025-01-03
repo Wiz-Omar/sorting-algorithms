@@ -68,6 +68,54 @@ public class SortingAlgorithmsTest {
     assertEquals("[1, 1, 1, 1, 1]", Arrays.toString(data5));
     assertEquals("[1, 1, 1, 1, 1]", Arrays.toString(data6));
   }
+  @Test //Partition 5
+  public void testEmptyArray() {
+    final Integer[] data1 = {};
+    final Integer[] data2 = {};
+    final Integer[] data3 = {};
+    final Integer[] data4 = {};
+    final Integer[] data5 = {};
+    final Integer[] data6 = {};
+
+    BubbleSort.bubbleSort(data1);
+    Heapsort.heapSort(data2);
+    InsertionSort.insertionSort(data3);
+    MergeSort.mergeSort(data4);
+    Quicksort.quickSort(data5);
+    SelectionSort.selectionSort(data6);
+
+    assertEquals("[]", Arrays.toString(data1));
+    assertEquals("[]", Arrays.toString(data2));
+    assertEquals("[]", Arrays.toString(data3));
+    assertEquals("[]", Arrays.toString(data4));
+    assertEquals("[]", Arrays.toString(data5));
+    assertEquals("[]", Arrays.toString(data6));
+
+  }
+  @Test //Partition 6
+  public void testSingleElementArray() {
+    final Integer[] data1 = {5};
+    final Integer[] data2 = {5};
+    final Integer[] data3 = {5};
+    final Integer[] data4 = {5};
+    final Integer[] data5 = {5};
+    final Integer[] data6 = {5};
+
+    BubbleSort.bubbleSort(data1);
+    Heapsort.heapSort(data2);
+    InsertionSort.insertionSort(data3);
+    MergeSort.mergeSort(data4);
+    Quicksort.quickSort(data5);
+    SelectionSort.selectionSort(data6);
+
+    assertEquals("[5]", Arrays.toString(data1));
+    assertEquals("[5]", Arrays.toString(data2));
+    assertEquals("[5]", Arrays.toString(data3));
+    assertEquals("[5]", Arrays.toString(data4));
+    assertEquals("[5]", Arrays.toString(data5));
+    assertEquals("[5]", Arrays.toString(data6));
+
+  }
   @Test //Partition 7
   public void testAlreadySortedArray() {
     final Integer[] data1 = {1, 2, 3, 4, 5};
